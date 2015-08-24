@@ -1,0 +1,12 @@
+[ClassVersion("1.0.0.0"), FriendlyName("xCertificateStore")]
+class xCertificateStore : OMI_BaseResource
+{
+    [Write, ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+    [Key] String Thumbprint;
+    [Key, ValueMap{"LocalMachine"}, Values{"LocalMachine"}] String RootStore;
+    [Key, ValueMap{"TrustedPublisher","ClientAuthIssuer","LyncCertStore","Remote Desktop","Root","TrustedDevices","MSIEHistoryJournal","CA","Windows Live ID Token Issuer","Request","AuthRoot","FlightRoot","TrustedPeople","My","SmartCardRoot","Trust","Disallowed"}, Values{"TrustedPublisher","ClientAuthIssuer","LyncCertStore","Remote Desktop","Root","TrustedDevices","MSIEHistoryJournal","CA","Windows Live ID Token Issuer","Request","AuthRoot","FlightRoot","TrustedPeople","My","SmartCardRoot","Trust","Disallowed"}] String Store;
+    [Write] String Path;
+    [Write] String Password;
+    [Read] DateTime Expires;
+    [Read] String Subject
+};
