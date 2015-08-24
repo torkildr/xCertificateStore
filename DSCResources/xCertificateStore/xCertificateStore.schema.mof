@@ -8,5 +8,5 @@ class xCertificateStore : OMI_BaseResource
     [Write] String Path;
     [Write] String Password;
     [Read] DateTime Expires;
-    [Read] String Subject
+    [Read] String Subject;
 };
